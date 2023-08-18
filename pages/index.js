@@ -5,7 +5,7 @@ import Carrusel from '../components/Carrusel';
 import Instagram from '../components/Instagram';
 import Slider from '../components/Slider';
 import { SliderData } from '../components/SliderData';
-import Footer from '../components/Footer'; 
+import Footer from '../components/Footer';
 import FloatingButton from '../components/FloatingButton';
 import Portfolio from '../components/Portfolio'; // Asegúrate de importar el componente Portfolio
 
@@ -48,22 +48,17 @@ export default function Home() {
       <Carrusel heading='Captur Photography' message='I capture moments in nature and keep them alive.' />
       <Slider slides={SliderData} />
       <Instagram />
-      <FloatingButton/>
+      <FloatingButton />
       <Portfolio imageData={imageData} setZoomedImage={setZoomedImage} />
-
-
-{/* Imagen Ampliada */}
-{zoomedImage !== null && (
-  <div className='image-zoom-container'>
-    <img src={imageData[zoomedImage].src} alt='Zoomed Image' />
-    {/* Agrega botones para navegar entre imágenes ampliadas */}
-    <button onClick={() => setZoomedImage(null)}>Cerrar</button>
-  </div>
-)}
-
+      {/* Imagen Ampliada */}
+      {zoomedImage !== null && (
+        <div className='image-zoom-container'>
+          <img src={imageData[zoomedImage].src} alt='Zoomed Image' />
+          {/* Agrega botones para navegar entre imágenes ampliadas */}
+          <button onClick={() => setZoomedImage(null)}>Cerrar</button>
+        </div>
+      )}
       <Footer />
-      
-      
     </div>
   );
 }
