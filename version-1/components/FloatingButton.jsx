@@ -12,7 +12,7 @@ const FloatingButton = () => {
   };
 
   return (
-    <div className="fixed bottom-10 right-10 sm:right-5 md:right-10 lg:right-20">
+    <div className="fixed bottom-10 right-10 sm:right-5 md:right-5 lg:right-20">
       <button
         className="bg-green-500 hover:bg-green-600 rounded-full p-3 shadow-md flex items-center justify-center text-white transition duration-300 transform hover:scale-110"
         style={{ width: '50px', height: '50px' }}

@@ -11,7 +11,6 @@ const work = () => {
         <Portfolio />
         <FloatingButton/>
         <Footer />
-
     </div>
   )
 }

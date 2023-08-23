@@ -14,12 +14,22 @@ const Navbar = () => {
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 90) {
-        setColor('#ffffff');
-        setTextColor('#000000');
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (window.scrollY >= 90) {
+          setColor('#171717');
+          setTextColor('#ffffff');
+        } else {
+          setColor('transparent');
+          setTextColor('#ffffff');
+        }
       } else {
-        setColor('transparent');
-        setTextColor('#ffffff');
+        if (window.scrollY >= 90) {
+          setColor('#ffffff');
+          setTextColor('#000000');
+        } else {
+          setColor('transparent');
+          setTextColor('#ffffff');
+        }
       }
     };
     window.addEventListener('scroll', changeColor);

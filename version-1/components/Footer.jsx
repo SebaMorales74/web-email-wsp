@@ -1,8 +1,6 @@
-import React from 'react';
-
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 text-white py-10">
+    <footer className="bg-blue-900 dark:bg-neutral-900 text-white py-10">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <div className="mr-4">Logo</div>

@@ -94,9 +94,14 @@ const Portfolio = () => {
       .catch((error) => console.error('Error al obtener archivos de imagen:', error));
   }, []);
   return (
-    <div className='max-w-7xl mx-auto py-16 text-center relative'>
-      <h1 className='font-bold text-4xl p-4 text-gray-800 text-center my-10'>Proyectos realizados</h1>
+    <div className='max-w-7xl mx-auto text-center relative py-4'>
+      <h1 className='font-bold text-4xl text-center mt-10 pb-4'>Proyectos realizados</h1>
       <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+        {imageData.length === 0 && (
+          <div className='col-span-full text-center mb-10'>
+            <p className='text-xl text-gray-600'>Cargando imágenes...</p>
+          </div>
+        )}
         {imageData.map((image, index) => (
           <div
             key={image.src}
@@ -107,7 +112,6 @@ const Portfolio = () => {
               <Image
                 src={image.src}
                 alt={image.alt}
-                layout='fill'
                 objectFit='cover'
                 className='rounded-lg'
               />
