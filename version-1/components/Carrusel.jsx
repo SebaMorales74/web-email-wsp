@@ -29,7 +29,7 @@ const Carrusel = ({ heading, message }) => {
           <div className='absolute p-5 text-white z-[4] text-center'>
             <h2 className='text-5xl font-bold'>{heading}</h2>
             <p className='py-2 text-xl'>{message}</p>
-            <button className='px-8 py-2 border'>Book</button>
+            <button className='px-8 py-2 border'>Agendar</button>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ const Carrusel = ({ heading, message }) => {
           <div className='absolute p-5 text-white z-[4] text-center'>
             <h2 className='text-5xl font-bold'>{heading}</h2>
             <p className='py-2 text-xl'>{message}</p>
-            <button className='px-8 py-2 border'>Book</button>
+            <button className='px-8 py-2 border'>Agendar</button>
           </div>
         </div>
 
@@ -59,7 +59,7 @@ const Carrusel = ({ heading, message }) => {
           <div className='absolute p-5 text-white z-[4] text-center'>
             <h2 className='text-5xl font-bold'>{heading}</h2>
             <p className='py-2 text-xl'>{message}</p>
-            <button className='px-8 py-2 border'>Book</button>
+            <button className='px-8 py-2 border'>Agendar</button>
           </div>
         </div>
       </Carousel>
